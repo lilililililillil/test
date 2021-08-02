@@ -1,0 +1,289 @@
+<!doctype html>
+<html xmlns="http://www.kerm/kerm/xhtml">
+ <head id="Head1"> 
+  <title>
+
+</title> 
+  <style>
+        @font-face
+        {
+            font-family: 'Droid Arabic Naskh';
+            src: url('App_Themes/Windows7/Softmax/font/DroidNaskh-Regular.woff') format('woff');
+        }
+
+        @font-face
+        {
+            font-family: 'Droid Arabic Naskh';
+            font-weight: bold;
+            src: url('App_Themes/Windows7/Softmax/font/DroidNaskh-Bold.woff') format('woff');
+        }
+
+        .right-text
+        {
+            text-align: right !important;
+        }
+
+        .center-text
+        {
+            text-align: center !important;
+        }
+
+        .rpgFieldItem
+        {
+            border: none !important;
+            text-align: center !important;
+            background-color: #f1f5fb !important;
+            font-size: 14px;
+            color: #4c607a !important;
+            background-image: none !important;
+        }
+
+            .rpgFieldItem:hover
+            {
+                border: none !important;
+                text-align: center !important;
+                background-color: #f1f5fb !important;
+                background-image: none !important;
+                font-size: 14px;
+                color: #4c607a !important;
+            }
+
+        .rpgRowsZone
+        {
+            border-width: 1px 1px 1px 1px !important;
+            text-align: right !important;
+            vertical-align: middle !important;
+        }
+
+        div.RadPivotGrid .rpgRowsZone, div.RadPivotGrid .rpgRowHeaderZone, div.RadPivotGrid .rpgPagerCell, div.RadPivotGrid .rpgDataZone, div.RadPivotGrid .rpgFilterZone, div.RadPivotGrid .rpgHorizontalScroll
+        {
+            border-left: 1px solid #c2cedb!important;
+        }
+
+        .rpgRowTotalDataCell
+        {
+            text-align: center !important;
+        }
+
+        .txt-captcha
+        {
+        }
+
+        .captcha-img
+        {
+            padding-bottom: 10px;
+        }
+
+        </style> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description"> 
+  <meta name="author"> 
+  <!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /--> 
+  <!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /--> 
+  <!--script src="js/less-1.3.3.min.js"></script--> 
+  <!--append ‘#!watch’ to the browser URL, then refresh the page. --> 
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="css/style.css" rel="stylesheet"> 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+  <!--[if lt IE 9]>
+     
+  <![endif]--> 
+  <!-- Fav and touch icons --> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="css/img/apple-touch-icon-144-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="css/img/apple-touch-icon-114-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="css/img/apple-touch-icon-72-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" href="css/img/apple-touch-icon-57-precomposed.png"> 
+  <link rel="shortcut icon" href="css/img/favicon.png"> 
+  <link href="/Telerik.Web.UI.WebResource.axd?compress=1&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2014.2.724.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a6915a8c2-c063-435a-ab31-d2d2285652a6%3a9ad5c0b%3abf649b0" type="text/css" rel="stylesheet"> 
+ </head> 
+ <body style="direction: rtl; background-image: url(css/img/bg.png); background-repeat: no-repeat; background-size: cover;"> 
+  <form method="post" action="&amp;serial=" id="form1"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="RadScriptManager2_TSM" id="RadScriptManager2_TSM" value=";;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en-US:92dc34f5-462f-43bd-99ec-66234f705cd1:ea597d4b:b25378d2;Telerik.Web.UI, Version=2014.2.724.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:6915a8c2-c063-435a-ab31-d2d2285652a6:16e4e7cd:ed16cbdc:ddbfcb67:f7645509"> 
+    <input type="hidden" name="RadStyleSheetManager_TSSM" id="RadStyleSheetManager_TSSM" value=";Telerik.Web.UI, Version=2014.2.724.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:6915a8c2-c063-435a-ab31-d2d2285652a6:9ad5c0b:bf649b0"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzNjczNTEyMDgPZBYCAgMPZBYCAgcPZBYEAgEPFCsABg8WDB4LXyFEYXRhQm91bmRnHhJBbGxvd0N1c3RvbVNvcnRpbmdnHgtfIUl0ZW1Db3VudAIBHhVFbmFibGVFbWJlZGRlZFNjcmlwdHNnHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0Zx4SUmVzb2x2ZWRSZW5kZXJNb2RlCylyVGVsZXJpay5XZWIuVUkuUmVuZGVyTW9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxNC4yLjcyNC40NSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0AWQUKwADZGQUKwACFgIeEUl0ZW1QbGFjZUhvbGRlcklEBRlsc3RWd0luZm9faXRlbVBsYWNlaG9sZGVyZBQrAAMPBQZfIURTSUMCAQ8FC18hSXRlbUNvdW50AgEPBQhfIVBDb3VudGRkFgIeAl9jZmQWAmYPZBYCAgEPFgIeDlNhdmVkT2xkVmFsdWVzFwAWVAIBDw8WAh4EVGV4dAUO2Yfbldq125XYqNis25VkZAIDDw8WAh8JBQ7Zh9uV2rXbldio2KzblWRkAgUPDxYCHwkFNdmC2YjYqtin2KjYrtin2YbbldmJINi025XZh9uM2K8g2KfZhtmI2LHZiSDZhdmH2YbYr9izZGQCBw8PFgIfCQUo2LTbldmG24zbldixINio2KfZgtuMICDZgtin2K/YsSDZhdit2YXYr2RkAgkPDxYCHwkFDTIxMzUwMTA0NzAwNjJkZAILDw8WAh8JBQjZhdin2YjblWRkAg8PDxYCHwkFFdiy2YXYp9mG24wg2YPZiNix2K/bjGRkAhEPDxYCHwkFAjI1ZGQCEw8PFgIfCQUEMjUuMmRkAhUPDxYCHwkFBDUwLjJkZAIXDw8WAh8JBSXYstmF2KfZhtuMINi525XYsduV2KjbjCDZiCDYptin24zbjNmGZGQCGQ8PFgIfCQUCMTZkZAIbDw8WAh8JBQQyMi44ZGQCHQ8PFgIfCQUENDEuNGRkAh8PDxYCHwkFHNiy2YXYp9mG24wgINim24zZhtqv2YTbjNiy24xkZAIhDw8WAh8JBQIyM2RkAiMPDxYCHwkFBDIwLjRkZAIlDw8WAh8JBQQ0My40ZGQCJw8PFgIfCQUO2KjbjNix2qnYp9ix24xkZAIpDw8WAh8JBQIxN2RkAisPDxYCHwkFAjMzZGQCLQ8PFgIfCQUCNTBkZAIvDw8WAh8JBQvYstin2YbYs9iqIGRkAjEPDxYCHwkFAjI4ZGQCMw8PFgIfCQUEMjguOGRkAjUPDxYCHwkFBDU2LjhkZAI3Dw8WAh8JBRXaqduG2YXbldq12KfbjNuV2KrbjCBkZAI5Dw8WAh8JBQIxOGRkAjsPDxYCHwkFBDIyLjhkZAI9Dw8WAh8JBQQ0MC44ZGQCPw8PFgIfCWVkZAJBDw8WAh8JZWRkAkMPDxYCHwllZGQCRQ8PFgIfCWVkZAJHDw8WAh8JZWRkAkkPDxYCHwllZGQCSw8PFgIfCWVkZAJNDw8WAh8JZWRkAk8PDxYCHwllZGQCUQ8PFgIfCWVkZAJTDw8WAh8JZWRkAlUPDxYCHwllZGQCAw8PZA8QFgFmFgEWAh4OUGFyYW1ldGVyVmFsdWUFDTIxMzUwMTA0NzAwNjIWAWZkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUJbHN0VndJbmZvwCZE2mg55qAvjwu7+BurjyjXI4cPtboSLGcEIom2s/s="> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="04EC1EDE"> 
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAOTdi1+x/ywE/friXGE5zCc0XB1pA3opt2/pfWdweSX6AUB1/tOwXDx+oTG9di2UVHvitqDbGC4YlC3BPnGSerylYfMpPEdaX9R0JkVU3E2OA=="> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('RadScriptManager2', 'form1', ['tRadAjaxManagerContentUpdaterSU','RadAjaxManagerContentUpdaterSU'], [], [], 90, '');
+//]]>
+</script> 
+   <!-- 2014.2.724.45 --> 
+   <div id="RadAjaxManagerContentUpdaterSU" style="display: none;"> 
+    <span id="RadAjaxManagerContentUpdater" style="display:none;"></span> 
+   </div> 
+   <div style="padding-left: 5%; padding-right: 5%; font-family: 'Droid Arabic Naskh';"> 
+    <div class="row clearfix"> 
+     <div class="col-md-12 column" style="text-align: center"> 
+      <hr> 
+     </div> 
+    </div> 
+    <div id="pnlInfo"> 
+     <table width="100%" style="padding: 5px 5px 5px 5px; text-align: center; direction: rtl;"> 
+      <tbody> 
+       <tr> 
+        <td align="right" style="font-size: 12px; font-weight: 600;"> <br> 
+         <div class="row clearfix"> 
+          <div class="col-md-8 column" style="background-color: #F1F1F1; padding: 15px"> 
+           <h5 style="color: red"> LOVE YOU</h5> 
+           <br>
+          </div> 
+          <div class="col-md-4 column"> 
+           <table class="table table-hover"> 
+            <tbody> 
+             <tr style="display:none"> 
+              <td style="width:35%"> <span id="lstVwInfo_ctrl0_Label14" style="color:Red;">هاکرا</span> </td> 
+             </tr> 
+             <tr style="display:none"> 
+              <td> <span id="lstVwInfo_ctrl0_Label32" style="color:Red;">هاکرا</span></td> 
+             </tr> 
+             <tr style="display:none"> 
+       قوتابخانەی هەورامان   <td>قوتابخانە/خوێندنگا : <span id="lstVwInfo_ctrl0_Label33" style="color:Red;"> هاکرا</span></td> 
+             </tr> 
+             <tr> 
+         کۆشش دانا     <td>ناوى قوتابى/خوێندکار : <span id="lstVwInfo_ctrl0_Label34" style="color:Red;"></span>نیە</td> 
+             </tr> 
+             <tr> 
+     سیستەمپاڕێزاو نییە هاکراوە         <td>کۆدی ئەزموونی‌ : <span id="lstVwInfo_ctrl0_Label35" style="color:Red;">نیە هاک کرا</span></td> 
+             </tr> 
+             <tr> 
+        دەرچـــووە      <td>ئەنجامی کۆتایی: <span id="lstVwInfo_ctrl0_Label37" style="color:Red;">دەرچووی خولی یەکەم</span></td> 
+             </tr> 
+             <tr> 
+              <td> <span id="lstVwInfo_ctrl0_lblrate" style="color:Red;"></span></td> 
+             </tr> 
+            </tbody> 
+           </table> 
+          </div> 
+         </div> 
+         <div class="row clearfix"> 
+          <div class="col-md-12 column"> 
+           <span id="lstVwInfo" style="display:none;"></span> 
+           <table class="table table-hover" style="padding:20px !important"> 
+            <tbody> 
+             <tr style="background-color:#F1F1F1 "> 
+              <td style="width:100%; vertical-align: middle;">ز</td> 
+              <td style="width:100%; vertical-align: middle;"> بابەت</td> 
+              <td style="width:100%; vertical-align: middle;">100%کۆششی ســــاڵەنەی</td> 
+              <td style="width:20%; vertical-align: middle;"> 60% ی تاقیکردنەوەی نیشتمانی</td> 
+              <td style="width:35%; vertical-align: middle;"> نمرەى كۆتايى</td> 
+             </tr> 
+             <tr> 
+              <td style="width:5%;background-color:#F1F1F1"> ١ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label2" style="color:Red;">زمانی كوردی</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label36" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label38" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label1" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٢ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label3" style="color:Red;">زمانی عەرەبی و ئایین</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label9" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label12" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label39" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٣ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label4" style="color:Red;">زمانی ئینگلیزی</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label5" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label6" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label7" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٤ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label11" style="color:Red;">بیرکاری</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label13" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label15" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label16" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٥ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label18" style="color:Red;">زانست </span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label19" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label20" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label21" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٦ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label23" style="color:Red;">کۆمەڵایەتی </span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label24" style="color:Red;">40</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label25" style="color:Red;">60</span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label26" style="color:Red;">100</span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٧ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label28" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label29" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label30" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label31" style="color:Red;"></span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٨ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label42" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label43" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label44" style="color:Red;"></span> </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label45" style="color:Red;"></span> </td> 
+             </tr> 
+             <tr> 
+              <td style="width:100%;background-color:#F1F1F1"> ٩ </td> 
+              <td style="width:100%"> <span id="lstVwInfo_ctrl0_Label47" style="color:Red;"></span> </td> 
+              <td style="width:20%"> <span id="lstVwInfo_ctrl0_Label48" style="color:Red;"></span> </td> 
+              <td style="width:20%"> <span id="lstVwInfo_ctrl0_Label49" style="color:Red;"></span> </td> 
+              <td style="width:35%"> <span id="lstVwInfo_ctrl0_Label50" style="color:Red;"></span> </td> 
+             </tr> 
+             <input id="lstVwInfo_ClientState" name="lstVwInfo_ClientState" type="hidden" autocomplete="off"> 
+            </tbody> 
+           </table> 
+          </div> 
+         </div> <input type="hidden" name="hdnStudentCode" id="hdnStudentCode" value=""> <input type="hidden" name="hdnStudentSerial" id="hdnStudentSerial" value=""> <script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('RadStyleSheetManager_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2014.2.724.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:6915a8c2-c063-435a-ab31-d2d2285652a6:9ad5c0b:bf649b0';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "",UpdatedControls : []}],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"RadAjaxManagerContentUpdater","updatePanelsRenderMode":0}, null, null, $get("RadAjaxManagerContentUpdater"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadListView, {"UniqueID":"lstVwInfo","_clientSettings":{"DataBinding":{"ItemPlaceHolderID":"lstVwInfo_itemPlaceholder","DataService":{}}},"_virtualItemCount":1,"clientStateFieldID":"lstVwInfo_ClientState"}, null, null, $get("lstVwInfo"));
+});
+//]]>
+</script> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+   </div> 
+  </form> 
+ </body>
+</html>
